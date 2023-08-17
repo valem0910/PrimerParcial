@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 
-const Form = (mostrarEleccion, setMostrarEleccion) => {
+const Form = (libro, setLibro, mostrarEleccion, setMostrarEleccion) => {
 
-const [libro, setLibro] = useState({
-        nombre:"",
-        libroFav:"",
-})
+
 
 const [show, setShow] = useState(false)
 const [error, setError] = useState(false)

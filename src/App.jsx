@@ -5,14 +5,19 @@ import Card from './Components/Card'
 import Form from './Components/Form';
 
 function App() {
+
+  const [libro, setLibro] = useState({
+    nombre:"",
+    libroFav:"",
+})
   
   const [mostrarEleccion, setMostrarEleccion] = useState(false)
   
 
   return (
     <div className='Add'>
-      <Form libro={libro} setMostrarEleccion ={setMostrarEleccion}/>
-      {mostrarEleccion && <Card mostrarEleccion={mostrarEleccion} libro={libro}/>}
+      <Form libro={libro} mostrarEleccion = {mostrarEleccion} setMostrarEleccion ={setMostrarEleccion} setLibro={setLibro}/>
+      {mostrarEleccion && <Card libro={libro}/>}
       
     </div>
    
